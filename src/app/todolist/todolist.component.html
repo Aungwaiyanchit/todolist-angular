@@ -1,0 +1,28 @@
+<div class="flex items-center flex-col mt-10">
+    <h3 class="text-4xl font-bold text-white">Todo Lists</h3>
+    <div class="flex mt-[70px] w-full justify-center gap-3">
+        <input type="text" name="" id="" 
+        class="border-2 border-black w-[50%] px-3" 
+        placeholder="Write something.."
+        >
+        <button 
+        class="bg-blue-500 hover:bg-blue-400  duration-75 px-3 py-2 text-white font-semibold shadow">add</button>
+    </div>
+    <div *ngIf="taskAllComplete" class="text-white mt-3">All task are complete.</div>
+    <div class="mt-10 flex gap-10 flex-col w-[50%] overflow-y-auto max-h-[calc(100vh-280px)]">
+        <div *ngFor="let todo of todoLists">
+            <div class="flex items-center gap-3 w-full bg-[#393939] p-4 shadow-lg"  
+                           (dblclick)="completeTask(todo.id)">
+                <i 
+                class="fa-regular text-white cursor-pointer"
+                [ngClass]="{'fa-circle-check fa-solid ': todo.complete, 'fa-circle': !todo.complete}"
+                (click)="completeTask(todo.id)"
+                ></i>
+                <p 
+                [ngClass]="{'line-through': todo.complete}" 
+                class="cursor-pointer select-none text-white"
+                >{{todo.title}}</p>   
+            </div>
+        </div>
+    </div>
+</div>

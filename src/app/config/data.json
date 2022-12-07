@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Work out at 6:am",
+        "complete": false
+    },
+    {
+        "id": 2,
+        "title": "Reading book",
+        "complete": true
+    },
+    {
+        "id": 3,
+        "title": "Lecture",
+        "complete": false
+    },
+    {
+        "id": 4,
+        "title": "Wash my bed",
+        "complete": false
+    },
+    {
+        "id": 5,
+        "title": "go to work",
+        "complete": false
+    }
+]
